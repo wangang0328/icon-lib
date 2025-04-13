@@ -14,7 +14,7 @@
     "build:docs": "vite build --config vite.config.docs.ts",
     "lint": "eslint .",
     "preview": "vite preview",
-    "publish": "pnpm run build && pnpm publish dist --access public"
+    "publish": "pnpm run build && tsx scripts/prepare-package.ts && pnpm publish dist --access public"
   },
   "dependencies": {
     "@types/fs-extra": "^11.0.4",
