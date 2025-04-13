@@ -1,0 +1,39 @@
+{
+  "files": [],
+  "compilerOptions": {
+    /* 基本配置 */
+    "target": "ESNext",
+    "module": "ESNext",
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    "jsx": "react-jsx",
+    "strict": true,
+    "skipLibCheck": true,
+
+    /* 声明文件生成 */
+    "declaration": true,
+    "declarationDir": "dist/types",  // 声明文件输出目录
+    "emitDeclarationOnly": true,     // 仅生成声明文件（配合 Vite 构建）
+    "rootDir": "src",               // 源代码根目录
+    "outDir": "dist",               // 输出目录（JS 文件由 Vite 处理）
+
+    /* 模块解析 */
+    "moduleResolution": "node",     // 改为 node（bundler 模式可能不兼容）
+    "esModuleInterop": true,        // 确保兼容 CommonJS/ESM
+    "forceConsistentCasingInFileNames": true,
+
+    /* Linting */
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedSideEffectImports": true,
+    "allowImportingTsExtensions": true,
+
+    /* 路径别名（可选） */
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist", "**/*.test.tsx"]
+}
