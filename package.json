@@ -9,6 +9,7 @@
   "author": "abel <aha_wangang@foxmail.com>",
   "scripts": {
     "generate": "tsx scripts/build-icons.ts && tsx scripts/build-exports.ts",
+    "load": "tsx scripts/load-icons.ts",
     "dev": "vite",
     "build": "tsc && vite build",
     "build:docs": "vite build --config vite.config.docs.ts",
